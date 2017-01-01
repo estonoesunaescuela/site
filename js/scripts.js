@@ -1,7 +1,6 @@
 const RETURN_CODES = [100, 200, 300, 400, 500];
 const ALERT_TYPES = ["alert-warning", "alert-success", "alert-warning", "alert-danger", "alert-danger"];
 $(document).ready(function(){
-
     $('#inputForm').on("submit", function(event) {
         event.preventDefault();
         console.log($(this));
