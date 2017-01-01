@@ -13,6 +13,7 @@ $(document).ready(function() {
     $('#inputForm').on("submit", function(event) {
         event.preventDefault();
         let data = $(this).serialize();
+        $("#alert-message").hide();
         $("#spinner-div").show();
         $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbxlj0pvtXo0cjOuGkpZvhoHRXdkTqvCiJzgnNpPIfV-LiNB_jk/exec",
