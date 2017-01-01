@@ -1,13 +1,15 @@
 const RETURN_CODES = [100, 200, 300, 400, 500];
 const ALERT_TYPES = ["alert-warning", "alert-success", "alert-warning", "alert-danger", "alert-danger"];
 
-$(function(){
-    $("[data-hide]").on("click", function(){
+$(function() {
+    $("[data-hide]").on("click", function() {
         $("." + $(this).attr("data-hide")).hide();
     });
 });
 
-$(document).ready(function(){
+$(document).ready(function() {
+    $("#spinner-div").hide();
+    $("#close-x").hide();
     $('#inputForm').on("submit", function(event) {
         event.preventDefault();
         let data = $(this).serialize();
@@ -27,6 +29,8 @@ $(document).ready(function(){
                 $("#alert-text").text(message);
                 $("#spinner-div").hide();
                 $("#alert-message").show();
+                $("#close-x").show();
+
             })
             .fail(function(jqXHR) {
                 console.log("Fails: " + jqXHR);
@@ -34,5 +38,3 @@ $(document).ready(function(){
 
     });
 });
-
-
