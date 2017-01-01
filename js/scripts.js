@@ -11,6 +11,7 @@ $(document).ready(function(){
     $('#inputForm').on("submit", function(event) {
         event.preventDefault();
         let data = $(this).serialize();
+        $("#spinner-div").show();
         $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbxlj0pvtXo0cjOuGkpZvhoHRXdkTqvCiJzgnNpPIfV-LiNB_jk/exec",
                 method: "post",
@@ -18,6 +19,7 @@ $(document).ready(function(){
                 data: data
             })
             .done(function(msg) {
+                $("#spinner-div").hide();
                 //Do sth and present to the user valid information, clean form;
                 var code = msg.return_code;
                 var index = RETURN_CODES.indexOf(code);
