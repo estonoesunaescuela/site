@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('#inputForm').on("submit", function(event) {
         event.preventDefault();
         console.log($(this));
-        var data = $(this).serialize();
+        let data = $(this).serialize();
         console.log(data);
         $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbxlj0pvtXo0cjOuGkpZvhoHRXdkTqvCiJzgnNpPIfV-LiNB_jk/exec",
