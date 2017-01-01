@@ -27,5 +27,5 @@ div.container {
 }
 
 .hidden {
-	display: none;
+	visibility: hidden;
 }

@@ -19,13 +19,13 @@ $(document).ready(function(){
                 data: data
             })
             .done(function(msg) {
-                $("#spinner-div").hide();
                 //Do sth and present to the user valid information, clean form;
                 var code = msg.return_code;
                 var index = RETURN_CODES.indexOf(code);
                 $("#alert-message").removeClass("alert-warning alert-success alert-danger").addClass(ALERT_TYPES[index]);
                 var message = msg.return_message;
                 $("#alert-text").text(message);
+                $("#spinner-div").hide();
                 $("#alert-message").show();
             })
             .fail(function(jqXHR) {
