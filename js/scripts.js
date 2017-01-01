@@ -17,10 +17,9 @@ $(document).ready(function(){
                 console.log("Data retrieved: " + msg);
                 var code = msg.return_code;
                 var index = RETURN_CODES.indexOf(code);
-                $("#alert-message").addClass(ALERT_TYPES[index]);
+                $("#alert-message").removeClass("alert-warning alert-success alert-danger").addClass(ALERT_TYPES[index]);
                 var message = msg.return_message;
-                $("#alert-message").text(message);
-
+                $("#alert-text").text(message);
             })
             .fail(function(jqXHR) {
                 console.log("Fails: " + jqXHR);
