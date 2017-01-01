@@ -1,3 +1,4 @@
+console.log("starting script");
 $.ajax({
         url: "https://script.google.com/macros/s/AKfycbxlj0pvtXo0cjOuGkpZvhoHRXdkTqvCiJzgnNpPIfV-LiNB_jk/exec",
         method: "post",
@@ -10,3 +11,4 @@ $.ajax({
     .fail(function(jqXHR) {
         console.log("Fails: " + jqXHR);
     });
+console.log("script executed");
