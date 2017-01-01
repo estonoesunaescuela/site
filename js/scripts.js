@@ -2,7 +2,7 @@ $.ajax({
         url: "https://script.google.com/macros/s/AKfycbxlj0pvtXo0cjOuGkpZvhoHRXdkTqvCiJzgnNpPIfV-LiNB_jk/exec",
         method: "post",
         dataType: "json",
-        data: { email: "ground.contacta@gmail.com", user_id: 9627469}
+        data: { email: "ground.contact@gmail.com", user_id: 9627469}
     })
     .done(function(msg) {
         console.log("Data retrieved: " + msg);
