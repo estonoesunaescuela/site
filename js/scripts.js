@@ -2,6 +2,7 @@ $(document).ready(function(){
 
     $('#inputForm').on("submit", function(event) {
         event.preventDefault();
+        console.log($(this));
         var data = $(this).serialize();
         console.log(data);
         $.ajax({
