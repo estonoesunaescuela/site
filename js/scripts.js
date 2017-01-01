@@ -1,5 +1,12 @@
 const RETURN_CODES = [100, 200, 300, 400, 500];
 const ALERT_TYPES = ["alert-warning", "alert-success", "alert-warning", "alert-danger", "alert-danger"];
+
+$(function(){
+    $("[data-hide]").on("click", function(){
+        $("." + $(this).attr("data-hide")).hide();
+    });
+});
+
 $(document).ready(function(){
     $('#inputForm').on("submit", function(event) {
         event.preventDefault();
@@ -29,8 +36,3 @@ $(document).ready(function(){
 });
 
 
-$(function(){
-    $("[data-hide]").on("click", function(){
-        $("." + $(this).attr("data-hide")).hide();
-    });
-});
