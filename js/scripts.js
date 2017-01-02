@@ -27,7 +27,7 @@ $(document).ready(function() {
                 var index = RETURN_CODES.indexOf(code);
                 $("#alert-message").removeClass("alert-warning alert-success alert-danger").addClass(ALERT_TYPES[index]);
                 var message = msg.return_message;
-                $("#alert-text").text(message);
+                $("#alert-text").html(message);
                 $("#spinner-div").hide();
                 $("#alert-message").show();
                 $("#close-x").show();
